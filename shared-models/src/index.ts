@@ -8,4 +8,5 @@ export type Ticket = {
   description: string;
   assigneeId: null | number;
   completed: boolean;
+  assignee?: User;
 };

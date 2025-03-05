@@ -1078,7 +1078,7 @@
   dependencies:
     regenerator-runtime "^0.13.11"
 
-"@babel/runtime@^7.18.3", "@babel/runtime@^7.26.0", "@babel/runtime@^7.5.5", "@babel/runtime@^7.8.7":
+"@babel/runtime@^7.18.3", "@babel/runtime@^7.25.7", "@babel/runtime@^7.26.0", "@babel/runtime@^7.5.5", "@babel/runtime@^7.8.7":
   version "7.26.9"
   resolved "https://registry.yarnpkg.com/@babel/runtime/-/runtime-7.26.9.tgz#aa4c6facc65b9cb3f87d75125ffd47781b475433"
   integrity sha512-aA63XwOkcl4xxQa3HjPMqOP6LiK0ZDv3mUPYEFXkpHbaFjtGggE1A61FjFzJnB+p7/oy2gA8E+rcBNl/zC1tMg==
@@ -1901,7 +1901,7 @@
   resolved "https://registry.yarnpkg.com/@mui/types/-/types-7.2.21.tgz#63f50874eda8e4a021a69aaa8ba9597369befda2"
   integrity sha512-6HstngiUxNqLU+/DPqlUJDIPbzUBxIVHb1MmXP0eTWDIROiCR2viugXpEif0PPe2mLqqakPzzRClWAnK+8UJww==
 
-"@mui/utils@^6.4.6":
+"@mui/utils@^5.16.6 || ^6.0.0", "@mui/utils@^6.4.6":
   version "6.4.6"
   resolved "https://registry.yarnpkg.com/@mui/utils/-/utils-6.4.6.tgz#307828bee501d30ed5cd1e339ca28c9efcc4e3f9"
   integrity sha512-43nZeE1pJF2anGafNydUcYFPtHwAqiBiauRtaMvurdrZI3YrUjHkAu43RBsxef7OFtJMXGiHFvq43kb7lig0sA==
@@ -1912,6 +1912,27 @@
     clsx "^2.1.1"
     prop-types "^15.8.1"
     react-is "^19.0.0"
+
+"@mui/x-data-grid@^7.27.2":
+  version "7.27.2"
+  resolved "https://registry.yarnpkg.com/@mui/x-data-grid/-/x-data-grid-7.27.2.tgz#79d2beb4c18bb1cabc2e39d07f61825af25bb3a4"
+  integrity sha512-Nj6PWp6WN0gkps676j1Jai3mP1fQotJbqMTvllU7LwQp09S/RE/uJicYdqfeWQLxtQipWm5dnAY63gzsTiAHGA==
+  dependencies:
+    "@babel/runtime" "^7.25.7"
+    "@mui/utils" "^5.16.6 || ^6.0.0"
+    "@mui/x-internals" "7.26.0"
+    clsx "^2.1.1"
+    prop-types "^15.8.1"
+    reselect "^5.1.1"
+    use-sync-external-store "^1.0.0"
+
+"@mui/x-internals@7.26.0":
+  version "7.26.0"
+  resolved "https://registry.yarnpkg.com/@mui/x-internals/-/x-internals-7.26.0.tgz#e8c3060582c102127ab55b0a93e881930dac107b"
+  integrity sha512-VxTCYQcZ02d3190pdvys2TDg9pgbvewAVakEopiOgReKAUhLdRlgGJHcOA/eAuGLyK1YIo26A6Ow6ZKlSRLwMg==
+  dependencies:
+    "@babel/runtime" "^7.25.7"
+    "@mui/utils" "^5.16.6 || ^6.0.0"
 
 "@nestjs/common@9.2.1":
   version "9.2.1"
@@ -2635,6 +2656,18 @@
   version "1.2.130"
   resolved "https://registry.yarnpkg.com/@swc/wasm/-/wasm-1.2.130.tgz#88ac26433335d1f957162a9a92f1450b73c176a0"
   integrity sha512-rNcJsBxS70+pv8YUWwf5fRlWX6JoY/HJc25HD/F8m6Kv7XhJdqPPMhyX6TKkUBPAG7TWlZYoxa+rHAjPy4Cj3Q==
+
+"@tanstack/query-core@5.67.1":
+  version "5.67.1"
+  resolved "https://registry.yarnpkg.com/@tanstack/query-core/-/query-core-5.67.1.tgz#419e8a94acd773d63cf4746d3df842c3329f56c2"
+  integrity sha512-AkFmuukVejyqVIjEQoFhLb3q+xHl7JG8G9cANWTMe3s8iKzD9j1VBSYXgCjy6vm6xM8cUCR9zP2yqWxY9pTWOA==
+
+"@tanstack/react-query@^5.67.1":
+  version "5.67.1"
+  resolved "https://registry.yarnpkg.com/@tanstack/react-query/-/react-query-5.67.1.tgz#040b2e2fe60681f8c1f69f2378f0d43d9533af51"
+  integrity sha512-fH5u4JLwB6A+wLFdi8wWBWAYoJV5deYif2OveJ26ktAWjU499uvVFS1wPWnyEyq5LvZX1MZInvv9QRaIZANRaQ==
+  dependencies:
+    "@tanstack/query-core" "5.67.1"
 
 "@testing-library/dom@^8.13.0", "@testing-library/dom@^8.5.0":
   version "8.20.0"
@@ -9071,6 +9104,11 @@ requires-port@^1.0.0:
   resolved "https://registry.yarnpkg.com/requires-port/-/requires-port-1.0.0.tgz#925d2601d39ac485e091cf0da5c6e694dc3dcaff"
   integrity sha512-KigOCHcocU3XODJxsu8i/j8T9tzT4adHiecwORRQ0ZZFcp7ahwXuRU1m+yuO90C5ZUyGeGfocHDI14M3L3yDAQ==
 
+reselect@^5.1.1:
+  version "5.1.1"
+  resolved "https://registry.yarnpkg.com/reselect/-/reselect-5.1.1.tgz#c766b1eb5d558291e5e550298adb0becc24bb72e"
+  integrity sha512-K/BG6eIky/SBpzfHZv/dd+9JBFiS4SWV7FIujVyJRux6e45+73RaUHXLmIR1f7WOMaQ0U1km6qwklRQxpJJY0w==
+
 resolve-cwd@^3.0.0:
   version "3.0.0"
   resolved "https://registry.yarnpkg.com/resolve-cwd/-/resolve-cwd-3.0.0.tgz#0f0075f1bb2544766cf73ba6a6e2adfebcb13f2d"
@@ -10264,6 +10302,11 @@ url-parse@^1.5.3:
   dependencies:
     querystringify "^2.1.1"
     requires-port "^1.0.0"
+
+use-sync-external-store@^1.0.0:
+  version "1.4.0"
+  resolved "https://registry.yarnpkg.com/use-sync-external-store/-/use-sync-external-store-1.4.0.tgz#adbc795d8eeb47029963016cefdf89dc799fcebc"
+  integrity sha512-9WXSPC5fMv61vaupRkCKCxsPxBocVnwakBEkMIHHpkTTg6icbJtg6jzgtLDm4bl3cSHAca52rYWih0k4K3PfHw==
 
 util-deprecate@^1.0.1, util-deprecate@^1.0.2, util-deprecate@~1.0.1:
   version "1.0.2"

@@ -1,14 +1,14 @@
 import {
-  NotFoundException,
-  UnprocessableEntityException,
-  Controller,
-  Get,
-  Put,
-  Post,
-  Param,
-  Delete,
   Body,
+  Controller,
+  Delete,
+  Get,
   HttpCode,
+  NotFoundException,
+  Param,
+  Post,
+  Put,
+  UnprocessableEntityException,
 } from '@nestjs/common';
 import { randomDelay } from '../utils/random-delay';
 import { TicketsService } from './tickets.service';

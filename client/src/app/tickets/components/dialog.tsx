@@ -48,8 +48,8 @@ export default function CreateDialog() {
               event.preventDefault();
               const formData = new FormData(event.currentTarget);
               const formJson = Object.fromEntries((formData as any).entries());
-              const email = formJson['description'];
-              mutate(email);
+              const data = formJson['description'];
+              mutate(data);
               handleClose();
             },
           },

@@ -1,9 +1,9 @@
 import { Ticket } from '@acme/shared-models';
-import { Box } from '@mui/material';
 import { useQuery } from '@tanstack/react-query';
 import { TicketsApi } from 'client/src/api/tickets';
 import { UsersApi } from 'client/src/api/users';
 import { useParams } from 'react-router-dom';
+import Detail from './details';
 import styles from './ticket-details.module.css';
 
 /* eslint-disable-next-line */
@@ -19,18 +19,19 @@ export function TicketDetails(props: TicketDetailsProps) {
     enabled: !!id,
   });
 
-  const { data: userData = [] } = useQuery({
+  const { data: userData } = useQuery({
     queryKey: ['users'],
     queryFn: () => UsersApi.fetchUserById(ticketData?.assigneeId as number),
     enabled: !!ticketData?.assigneeId,
   });
+
+  if (!ticketData || isLoading) {
+    return <div>Loading..</div>;
+  }
+
   return (
     <div className={styles['container']}>
-      <Box>
-        <Box>ID: {ticketData?.id}</Box>
-        <Box>Description: {ticketData?.description}</Box>
-        <Box>Assignee: {userData?.name ?? '--'}</Box>
-      </Box>
+      <Detail ticket={{ ...ticketData, assignee: userData }} />
     </div>
   );
 }
